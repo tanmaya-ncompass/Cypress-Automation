@@ -1,0 +1,68 @@
+[
+  {
+    "description": "    application Regression",
+    "keyword": "Feature",
+    "name": "PhoenX StockList validation",
+    "line": 1,
+    "id": "phoenx-stocklist-validation",
+    "tags": [],
+    "uri": "PhoenXStockList.feature",
+    "elements": [
+      {
+        "id": "phoenx-stocklist-validation;wsc-products-delivery",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "WSC products delivery",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I log in to the Ecommerce page",
+            "result": {
+              "status": "passed",
+              "duration": 12770000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I add a random item to Cart",
+            "result": {
+              "status": "passed",
+              "duration": 2931000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "Saved the item details to the fixture file",
+            "result": {
+              "status": "passed",
+              "duration": 198000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Added it to the Cart",
+            "result": {
+              "status": "passed",
+              "duration": 165000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

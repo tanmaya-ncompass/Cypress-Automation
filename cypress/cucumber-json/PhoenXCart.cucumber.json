@@ -1,0 +1,68 @@
+[
+  {
+    "description": "    application Regression",
+    "keyword": "Feature",
+    "name": "PhoenX Cart Page Validation",
+    "line": 1,
+    "id": "phoenx-cart-page-validation",
+    "tags": [],
+    "uri": "PhoenXCart.feature",
+    "elements": [
+      {
+        "id": "phoenx-cart-page-validation;wsc-product-cart",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "WSC product cart",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I opened Cart page",
+            "result": {
+              "status": "passed",
+              "duration": 14525000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I Verified the warehouse and item number",
+            "result": {
+              "status": "passed",
+              "duration": 5787000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I Verified the availability",
+            "result": {
+              "status": "passed",
+              "duration": 198000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I verified the price",
+            "result": {
+              "status": "passed",
+              "duration": 168000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
