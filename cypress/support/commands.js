@@ -37,6 +37,12 @@ Cypress.Commands.add("PhoenXLogin", () => {
     cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type("Admin123!")
     cy.get('.MuiButton-label').click()
 })
+
+Cypress.Commands.add("PhoenXAdminLogin", () => {
+    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type("akhilesh+wsc@phonexinc.com")
+    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type("Admin123!")
+    cy.get('.MuiButton-label').click()
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

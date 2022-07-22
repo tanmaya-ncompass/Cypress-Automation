@@ -1,0 +1,97 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "PhoenX Admin Channel Page Validation",
+    "line": 1,
+    "id": "phoenx-admin-channel-page-validation",
+    "tags": [],
+    "uri": "adminChannelSearch.feature",
+    "elements": [
+      {
+        "id": "phoenx-admin-channel-page-validation;wsc-admin-channel-search-functionality",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "WSC Admin Channel Search Functionality",
+        "tags": [
+          {
+            "name": "@ChannelNegativeTesting",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I opened channel page in Admin login",
+            "result": {
+              "status": "passed",
+              "duration": 12660000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I randomly select an item number and store its total availability",
+            "result": {
+              "status": "passed",
+              "duration": 3232000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I clicked on edit button of that item",
+            "result": {
+              "status": "passed",
+              "duration": 457000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I tried put random number in stock list and not assigned field",
+            "result": {
+              "status": "passed",
+              "duration": 1060000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I verified all the positive and negative testing",
+            "result": {
+              "status": "passed",
+              "duration": 3698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I changed the channel of the item randomly",
+            "result": {
+              "status": "passed",
+              "duration": 5261000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I verified the total availability, stock list, not assigned and default channel under the particular channel tab",
+            "result": {
+              "status": "passed",
+              "duration": 4257000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

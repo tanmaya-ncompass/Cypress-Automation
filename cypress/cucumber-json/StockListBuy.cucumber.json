@@ -11,12 +11,12 @@
       {
         "id": "phoenx-stocklist-validation;wsc-products-delivery",
         "keyword": "Scenario",
-        "line": 5,
+        "line": 6,
         "name": "WSC products delivery",
         "tags": [
           {
-            "name": "@Regression",
-            "line": 4
+            "name": "@SetDetails",
+            "line": 5
           }
         ],
         "type": "scenario",
@@ -24,41 +24,41 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 7,
             "name": "I log in to the Ecommerce page",
             "result": {
               "status": "passed",
-              "duration": 12489000000
+              "duration": 11670000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
+            "line": 8,
             "name": "I add a random item to Cart which is not in Cart",
             "result": {
               "status": "passed",
-              "duration": 546000000
+              "duration": 661000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "Saved the item details to the fixture file",
             "result": {
               "status": "passed",
-              "duration": 115000000
+              "duration": 124000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 10,
             "name": "Added it to the Cart",
             "result": {
               "status": "passed",
-              "duration": 173000000
+              "duration": 166000000
             }
           }
         ]

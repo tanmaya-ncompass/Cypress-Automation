@@ -6,7 +6,7 @@
     "line": 1,
     "id": "phoenx-cart-page-validation",
     "tags": [],
-    "uri": "CartBuy.feature",
+    "uri": "orderVerification.feature",
     "elements": [
       {
         "id": "phoenx-cart-page-validation;wsc-product-cart",
@@ -25,40 +25,40 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
-            "name": "I opened Cart page",
+            "name": "I opened Cart page and Verified the most recent item",
             "result": {
               "status": "passed",
-              "duration": 12391000000
+              "duration": 12822000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 7,
-            "name": "I Verified the warehouse and item number for Buy option",
+            "name": "I placed the order",
             "result": {
               "status": "passed",
-              "duration": 1453000000
+              "duration": 8711000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I Verified the availability",
+            "name": "I opened the orders page",
             "result": {
               "status": "passed",
-              "duration": 64000000
+              "duration": 8350000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "I verified the price",
+            "name": "I verified the order number and order status",
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 3788000000
             }
           }
         ]

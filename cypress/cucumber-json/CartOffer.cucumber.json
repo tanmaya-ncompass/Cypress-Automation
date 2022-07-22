@@ -28,7 +28,7 @@
             "name": "I opened Offer Awaiting tab in Cart page",
             "result": {
               "status": "passed",
-              "duration": 13442000000
+              "duration": 12501000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I Verified the warehouse and item number for Offer option",
             "result": {
               "status": "passed",
-              "duration": 1256000000
+              "duration": 1236000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I Verified the availability and offer price",
             "result": {
               "status": "passed",
-              "duration": 107000000
+              "duration": 87000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I verified the price",
             "result": {
               "status": "passed",
-              "duration": 100000000
+              "duration": 80000000
             }
           }
         ]

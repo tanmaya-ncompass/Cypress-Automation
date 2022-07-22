@@ -9,13 +9,13 @@
     "uri": "StockListOffer.feature",
     "elements": [
       {
-        "id": "phoenx-stocklist-validation;wsc-products-delivery",
+        "id": "phoenx-stocklist-validation;log-in-to-the-site",
         "keyword": "Scenario",
         "line": 5,
-        "name": "WSC products delivery",
+        "name": "Log in to the site",
         "tags": [
           {
-            "name": "@Regression",
+            "name": "@LogingIn",
             "line": 4
           }
         ],
@@ -25,40 +25,92 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
-            "name": "I log in to the Ecommerce page",
+            "name": "I open in to the Ecommerce page",
             "result": {
-              "status": "passed",
-              "duration": 12268000000
+              "status": "undefined",
+              "duration": 225000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 7,
-            "name": "I add a random item which is in the Cart",
+            "name": "I fill the EmailID and Password",
             "result": {
-              "status": "passed",
-              "duration": 2825000000
+              "status": "skipped"
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
+            "name": "Validate the forms behaviour",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Select the Shop Page",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "phoenx-stocklist-validation;wsc-products-delivery",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "WSC products delivery",
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I log in to the Ecommerce page",
+            "result": {
+              "status": "passed",
+              "duration": 11756000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I add a random item which is in the Cart",
+            "result": {
+              "status": "passed",
+              "duration": 3207000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
             "name": "Saved the item details to the fixture file",
             "result": {
               "status": "passed",
-              "duration": 126000000
+              "duration": 120000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 17,
             "name": "Added it to the Cart",
             "result": {
               "status": "passed",
-              "duration": 166000000
+              "duration": 176000000
             }
           }
         ]

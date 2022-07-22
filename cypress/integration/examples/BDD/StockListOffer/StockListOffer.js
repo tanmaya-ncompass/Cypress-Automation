@@ -5,13 +5,26 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 let filename = 'E:/node/CypressAutomation/cypress/fixtures/phoenXdetails.json';
+let localStorageDetails = 'E:/node/CypressAutomation/cypress/fixtures/phoenXLocalStorage.json'
 
 const StockListpage = new PhoenXStockListpage()
 
-Given('I log in to the Ecommerce page', () => {
 
-    cy.visit(Cypress.env('url'))
-    cy.PhoenXLogin()
+let keys = Object.keys(localStorage),
+    i = keys.length;
+
+
+Given('I log in to the Ecommerce page', () => {
+    cy.readFile(localStorageDetails).then(temp => {
+        let details = temp
+        cy.visit('https://wsc.phonexcorp.com/stock', {
+            onBeforeLoad: function (window) {
+                for (var key in details) {
+                    window.localStorage.setItem(key, details[key])
+                }
+            }
+        })
+    })
     cy.wait(10000)
 })
 
@@ -24,7 +37,8 @@ When('I add a random item which is in the Cart', () => {
 
         StockListpage.getAllItemsDropDownButtons().eq(randomNumber).then(response => {
             cy.readFile(filename).then(temp => {
-                temp.WareHouse = response.text()
+                temp.Offer = {}
+                temp.Offer.WareHouse = response.text()
                 cy.writeFile(filename, temp)
             })
         })
@@ -44,16 +58,28 @@ When('I add a random item which is in the Cart', () => {
                     var offerPrice = res - 5
                     StockListpage.getOfferPriceBox().clear().type(offerPrice)
                     cy.readFile(filename).then(temp => {
-                        temp.Offerprice = String(offerPrice)
-                        cy.log(offerPrice)
+                        temp.Offer.Offerprice = String(offerPrice)
                         cy.writeFile(filename, temp)
                     })
 
                 })
             }
             else {
-                cy.log("This feature file will only add products which is already in cart")
+                cy.wrap(element).contains("Buy").click()
+                StockListpage.getMakeAnOfferButton().click()
+                StockListpage.getItemPrice().then(response => {
+                    const id = response.text()
+                    var res = id.split("$")
+                    res = res[1].trim()
+                    var offerPrice = res - 5
+                    StockListpage.getOfferPriceBox().clear().type(offerPrice)
+                    cy.readFile(filename).then(temp => {
+                        temp.Offer.Offerprice = String(offerPrice)
+                        cy.writeFile(filename, temp)
+                    })
+                })
             }
+
         })
     })
 })
@@ -61,11 +87,11 @@ When('I add a random item which is in the Cart', () => {
 And('Saved the item details to the fixture file', () => {
     cy.readFile(filename).then(temp => {
         StockListpage.getItemsName().then(response => {
-            temp.item_name = response.text()
+            temp.Offer.item_name = response.text()
             cy.log(response.text())
         })
         StockListpage.getItemdesc().then(response => {
-            temp.description = response.text()
+            temp.Offer.description = response.text()
         })
         StockListpage.getItemID().then(response => {
             const id = response.text()
@@ -73,19 +99,19 @@ And('Saved the item details to the fixture file', () => {
             res = res[1].trim()
             res = res.split("]")
             res = res[0].trim()
-            temp.item_id = res
+            temp.Offer.item_id = res
         })
         StockListpage.getItemAvailability().then(response => {
             const id = response.text()
             var res = id.split("+")
             res = res[0].trim()
-            temp.availability = res
+            temp.Offer.availability = res
         })
         StockListpage.getItemPrice().then(response => {
             const id = response.text()
             var res = id.split("$")
             res = res[1].trim()
-            temp.price = res
+            temp.Offer.price = res
         })
         cy.writeFile(filename, temp)
     })

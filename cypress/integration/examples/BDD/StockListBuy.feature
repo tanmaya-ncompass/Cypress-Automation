@@ -1,7 +1,8 @@
 Feature:PhoenX StockList validation
 
     application Regression
-    @Regression
+
+    @SetDetails
     Scenario: WSC products delivery
         Given I log in to the Ecommerce page
         When I add a random item to Cart which is not in Cart

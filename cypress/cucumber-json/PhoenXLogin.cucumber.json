@@ -2,20 +2,20 @@
   {
     "description": "    application Regression",
     "keyword": "Feature",
-    "name": "PhoenX Cart Page Validation",
+    "name": "PhoenX StockList validation",
     "line": 1,
-    "id": "phoenx-cart-page-validation",
+    "id": "phoenx-stocklist-validation",
     "tags": [],
-    "uri": "CartBuy.feature",
+    "uri": "PhoenXLogin.feature",
     "elements": [
       {
-        "id": "phoenx-cart-page-validation;wsc-product-cart",
+        "id": "phoenx-stocklist-validation;wsc-log-in",
         "keyword": "Scenario",
         "line": 5,
-        "name": "WSC product cart",
+        "name": "WSC LOG in",
         "tags": [
           {
-            "name": "@Regression",
+            "name": "@GetDetails",
             "line": 4
           }
         ],
@@ -25,40 +25,40 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 6,
-            "name": "I opened Cart page",
+            "name": "I open the url",
             "result": {
               "status": "passed",
-              "duration": 12391000000
+              "duration": 431000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 7,
-            "name": "I Verified the warehouse and item number for Buy option",
+            "name": "I put the Email and password",
             "result": {
               "status": "passed",
-              "duration": 1453000000
+              "duration": 12188000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I Verified the availability",
+            "name": "I Got all the local storage Items",
             "result": {
               "status": "passed",
-              "duration": 64000000
+              "duration": 68000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 9,
-            "name": "I verified the price",
+            "name": "I Stored the local storage Items to the fixtures",
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 29000000
             }
           }
         ]
